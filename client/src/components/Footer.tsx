@@ -104,9 +104,6 @@ export default function Footer() {
             <p data-testid="text-footer-copyright">
               © {currentYear} Krushna Bankar. All rights reserved.
             </p>
-            <p className="flex items-center gap-2" data-testid="text-footer-made-with">
-              Made with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using React & TypeScript
-            </p>
           </div>
         </div>
       </div>

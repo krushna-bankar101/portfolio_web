@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Award, Trophy, Users, Code } from "lucide-react";
+import { Award, Trophy, Users, Code, X } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import javaImage from "@assets/generated_images/Java_Virtual_Program_Certificate_a0e46ea2.png";
 import frontendImage from "@assets/generated_images/Frontend_Development_Competition_Certificate_a66551fa.png";
 import udemyImage from "@assets/generated_images/Udemy_Web_Development_Certificate_10f69818.png";
@@ -10,6 +11,7 @@ import googleImage from "@assets/generated_images/Google_IT_Automation_Certifica
 export default function AchievementsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedCert, setSelectedCert] = useState<{ name: string; image: string } | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -149,8 +151,9 @@ export default function AchievementsSection() {
               {certifications.map((cert, index) => (
                 <Card
                   key={index}
-                  className="overflow-hidden border-primary/20 hover-elevate active-elevate-2 group transition-all duration-300 hover:scale-105"
+                  className="overflow-hidden border-primary/20 hover-elevate active-elevate-2 group transition-all duration-300 hover:scale-105 cursor-pointer"
                   data-testid={`card-cert-${index}`}
+                  onClick={() => setSelectedCert(cert)}
                 >
                   <div className="relative h-40 overflow-hidden">
                     <img
@@ -172,6 +175,33 @@ export default function AchievementsSection() {
             </div>
           </Card>
         </div>
+
+        {/* Certificate Modal */}
+        <Dialog open={!!selectedCert} onOpenChange={(open) => !open && setSelectedCert(null)}>
+          <DialogContent className="max-w-4xl" data-testid="dialog-certificate">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold">{selectedCert?.name}</DialogTitle>
+            </DialogHeader>
+            {selectedCert && (
+              <div className="flex flex-col items-center justify-center gap-4 py-6">
+                <img
+                  src={selectedCert.image}
+                  alt={selectedCert.name}
+                  className="max-w-full max-h-96 object-contain rounded-lg shadow-lg"
+                  data-testid="img-cert-modal"
+                />
+                <a
+                  href={selectedCert.image}
+                  download={`${selectedCert.name}.png`}
+                  className="mt-4 px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                  data-testid="btn-download-cert"
+                >
+                  Download Certificate
+                </a>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );

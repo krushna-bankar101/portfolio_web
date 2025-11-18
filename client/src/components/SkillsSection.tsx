@@ -26,7 +26,7 @@ export default function SkillsSection() {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["C++", "Java", "Python", "JavaScript"],
+      skills: ["C++", "Java", "Python", "JavaScript" , "mysql", "MongoDB"],
       color: "primary",
     },
     {

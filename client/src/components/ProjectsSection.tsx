@@ -145,7 +145,7 @@ export default function ProjectsSection() {
                     size="sm"
                     variant="outline"
                     className="flex-1"
-                    onClick={() => console.log(`View ${project.title}`)}
+                    onClick={() => window.open("https://github.com/krushna-bankar101", "_blank")}
                     data-testid={`button-view-${index}`}
                   >
                     <ExternalLink className="mr-2 h-3 w-3" />
@@ -154,7 +154,7 @@ export default function ProjectsSection() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    onClick={() => console.log(`GitHub for ${project.title}`)}
+                     onClick={() => window.open("https://github.com/krushna-bankar101", "_blank")}
                     data-testid={`button-github-${index}`}
                   >
                     <Github className="h-4 w-4" />
