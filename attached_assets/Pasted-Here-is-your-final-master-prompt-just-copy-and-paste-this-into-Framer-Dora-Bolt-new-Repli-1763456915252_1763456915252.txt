@@ -1,0 +1,164 @@
+Here is your **final master prompt** — just copy and paste this into **Framer, Dora, Bolt.new, Replit AI, or any AI website builder** to instantly generate your full modern portfolio website.
+
+---
+
+# 🚀 **MASTER PORTFOLIO WEBSITE GENERATION PROMPT (For Krushna Bankar)**
+
+**Create a fully responsive, modern, dark-theme developer portfolio website with neon accent highlights.
+The portfolio is for: *Krushna Chandrakant Bankar*.
+Design style: Tech/Developer Theme (Dark mode + neon blue/purple accents).
+Use smooth animations, glassmorphism cards, and professional typography.
+Generate clean, production-ready code.**
+
+---
+
+## 🔷 **1. PERSONAL DETAILS**
+
+**Name:** Krushna Chandrakant Bankar
+**Role:** Computer Engineering Student | Web Developer | Aspiring Full-Stack & Data Science Enthusiast
+**Bio:**
+“I’m Krushna Bankar, a Computer Engineering student at GCOERC, Nashik. I’m passionate about web development, full-stack technologies, and data science. I’ve worked on several projects including an Amazon clone, a social media app called Socialise, and a rental agreement transparency website. I also participate in hackathons and serve as the Treasurer of our college Coding Club. I’m eager to learn more and gain real-world experience through internships.”
+
+---
+
+## 🔷 **2. EDUCATION**
+
+* **B.E. in Computer Engineering** (Pursuing)
+  GCOERC, Nashik
+  Current SGPA: **8.7**
+
+---
+
+## 🔷 **3. EXPERIENCE**
+
+* **Frontend Developer Internship (Online)**
+  Worked on UI development and frontend-level tasks.
+
+* **Treasurer – Coding Club (GCOERC)**
+  Managing responsibilities, organizing events, and guiding juniors.
+
+* **Hackathon Mentor**
+  Supported and guided participants during college-level hackathons.
+
+---
+
+## 🔷 **4. SKILLS**
+
+**Programming:** C++, Java, Python
+**Web Development:** HTML, CSS, JavaScript, Full Stack (Learning)
+**Data Skills:** Beginner-level Data Science
+**Tools:** MS Excel, PowerPoint, Tally
+
+---
+
+## 🔷 **5. PROJECTS (Showcase Section)**
+
+### **1. Amazon Clone**
+
+Tech: HTML, CSS, JS
+Description: Built a responsive clone of Amazon’s homepage with UI components, product cards, and hover interactions.
+
+### **2. Web-based Mini Game**
+
+Tech: JavaScript, DOM
+Description: Designed an interactive browser-based mini-game.
+
+### **3. Tech-Guru Hackathon Project**
+
+Description: Built a functional prototype within time constraints during a college hackathon.
+
+### **4. Rental Agreement Transparency Website**
+
+Description: A platform for transparent, secure, and easy digital rental agreement management.
+
+### **5. Socialise – Social Media App**
+
+Description: Developed a social media application with posting, user interaction, and profile management features.
+
+---
+
+## 🔷 **6. ACHIEVEMENTS**
+
+* Participated in **Smart India Hackathon (SIH)**
+* Certificates:
+
+  * Java Virtual Program
+  * Frontend Competition
+  * Udemy & Google Certifications
+* Treasurer, Coding Club (GCOERC)
+
+---
+
+## 🔷 **7. CONTACT DETAILS**
+
+* **Email:** [krushnabankar101@gmail.com](mailto:krushnabankar101@gmail.com)
+* **Phone:** 9307460462
+* **GitHub:** github.com/krushna-bankar101
+* **LinkedIn:** linkedin.com/in/krushna-bankar-901514319
+* **Portfolio:** (None yet – generate one)
+
+---
+
+## 🔷 **8. WEBSITE REQUIREMENTS**
+
+### **Design Style**
+
+* Dark theme with neon blue/purple accents
+* Developer-style UI (gradient lines, glowing borders, terminal-style headings)
+* Smooth entrance animations (GSAP or Framer Motion style)
+* Glassmorphism sections
+* Responsive layout
+* Modern pixel-perfect design
+
+### **Pages/Sections**
+
+* **Hero Section:**
+  Name, role, description, glowing buttons (Resume + Contact)
+
+* **About Me** section
+
+* **Skills Grid** with neon glowing icons
+
+* **Projects Showcase** with hover animations
+
+* **Achievements Section**
+
+* **Contact Form** (fully working)
+
+* **Footer with social icons**
+
+### **Features**
+
+* Smooth scroll
+* Animated underline nav
+* Neon hover effects
+* Minimal loading animation
+
+### **Output Expected**
+
+* Fully responsive website
+* Clean HTML/CSS/JS or React (depending on builder)
+* Modern animations
+* Organized components
+* Downloadable as portfolio
+
+---
+
+## 🔷 **IMPORTANT**
+
+**Use my provided details exactly.
+Make the design professional, sharp, and modern.
+Focus on a developer-style aesthetic.**
+
+---
+
+### ✅ **End of Master Prompt**
+
+Whenever you're ready, paste this entire prompt into **Framer / Bolt.new / Dora / WebWave / Replit AI** and it will generate your full portfolio website.
+
+If you want, I can also generate:
+✅ Your **resume website version**
+✅ A **scroll animation version**
+✅ A **Framer Page Text-to-Site version**
+
+Just tell me!
