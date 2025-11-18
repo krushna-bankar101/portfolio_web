@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
+import AnimatedRoles from "./AnimatedRoles";
 
 export default function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -115,7 +116,8 @@ export default function HeroSection() {
             >
               Krushna Bankar
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-role">
+            <AnimatedRoles />
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto md:hidden" data-testid="text-role">
               Computer Engineering Student | Web Developer | Aspiring Full-Stack & Data Science Enthusiast
             </p>
           </div>
@@ -142,6 +144,21 @@ export default function HeroSection() {
             >
               <Mail className="mr-2 h-4 w-4" />
               Contact Me
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="hidden md:inline-flex neon-glow"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/resume.pdf';
+                link.download = 'Krushna_Bankar_Resume.pdf';
+                link.click();
+              }}
+              data-testid="button-download-resume"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
             </Button>
           </div>
 

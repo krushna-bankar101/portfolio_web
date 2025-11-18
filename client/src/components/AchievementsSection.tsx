@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Trophy, Users, Code } from "lucide-react";
+import javaImage from "@assets/generated_images/Java_Virtual_Program_Certificate_a0e46ea2.png";
+import frontendImage from "@assets/generated_images/Frontend_Development_Competition_Certificate_a66551fa.png";
+import udemyImage from "@assets/generated_images/Udemy_Web_Development_Certificate_10f69818.png";
+import googleImage from "@assets/generated_images/Google_IT_Automation_Certificate_c02702ba.png";
 
 export default function AchievementsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -56,10 +60,10 @@ export default function AchievementsSection() {
   ];
 
   const certifications = [
-    "Java Virtual Program",
-    "Frontend Development Competition",
-    "Udemy Web Development",
-    "Google IT Automation",
+    { name: "Java Virtual Program", image: javaImage },
+    { name: "Frontend Development Competition", image: frontendImage },
+    { name: "Udemy Web Development", image: udemyImage },
+    { name: "Google IT Automation", image: googleImage },
   ];
 
   return (
@@ -141,17 +145,28 @@ export default function AchievementsSection() {
             <h3 className="text-2xl font-bold mb-6 font-mono" data-testid="text-certifications-title">
               Certifications
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {certifications.map((cert, index) => (
                 <Card
                   key={index}
-                  className="p-4 border-primary/20 hover-elevate active-elevate-2 text-center transition-all duration-300 hover:scale-105"
+                  className="overflow-hidden border-primary/20 hover-elevate active-elevate-2 group transition-all duration-300 hover:scale-105"
                   data-testid={`card-cert-${index}`}
                 >
-                  <Award className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <p className="text-sm font-medium" data-testid={`text-cert-${index}`}>
-                    {cert}
-                  </p>
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={cert.image}
+                      alt={cert.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      data-testid={`img-cert-${index}`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+                  </div>
+                  <div className="p-4 text-center">
+                    <Award className="h-6 w-6 text-primary mx-auto mb-2" />
+                    <p className="text-sm font-medium" data-testid={`text-cert-${index}`}>
+                      {cert.name}
+                    </p>
+                  </div>
                 </Card>
               ))}
             </div>
