@@ -3,6 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import amazonImage from "@assets/generated_images/Amazon_clone_homepage_82d55de9.png";
+import socialiseImage from "@assets/generated_images/Socialise_social_media_app_cda06aa4.png";
+import rentalImage from "@assets/generated_images/Rental_agreement_platform_514c680f.png";
+import hackathonImage from "@assets/generated_images/Tech-Guru_hackathon_project_cd97e632.png";
+import gameImage from "@assets/generated_images/Web-based_mini_game_1cd7760c.png";
 
 export default function ProjectsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -31,30 +36,35 @@ export default function ProjectsSection() {
       description: "Built a responsive clone of Amazon's homepage with UI components, product cards, and interactive hover effects.",
       tech: ["HTML", "CSS", "JavaScript"],
       category: "Web Development",
+      image: amazonImage,
     },
     {
       title: "Socialise - Social Media App",
       description: "Developed a full-featured social media application with user profiles, posting functionality, and real-time interactions.",
       tech: ["JavaScript", "React", "Node.js"],
       category: "Full Stack",
+      image: socialiseImage,
     },
     {
       title: "Rental Agreement Transparency Platform",
       description: "Created a digital platform for transparent and secure rental agreement management with document verification.",
       tech: ["JavaScript", "Full Stack", "Security"],
       category: "Web Application",
+      image: rentalImage,
     },
     {
       title: "Tech-Guru Hackathon Project",
       description: "Built a functional prototype within tight time constraints during a college hackathon, focusing on innovative problem-solving.",
       tech: ["JavaScript", "Rapid Development"],
       category: "Hackathon",
+      image: hackathonImage,
     },
     {
       title: "Web-based Mini Game",
       description: "Designed an interactive browser-based mini-game using DOM manipulation and event handling.",
       tech: ["JavaScript", "DOM", "Game Logic"],
       category: "Game Development",
+      image: gameImage,
     },
   ];
 
@@ -87,7 +97,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className={`glass border-primary/20 hover-elevate active-elevate-2 group transition-all duration-700 hover:scale-105 perspective-1000 ${
+              className={`glass border-primary/20 hover-elevate active-elevate-2 group transition-all duration-700 hover:scale-105 perspective-1000 overflow-hidden ${
                 isVisible ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-10 rotate-3"
               }`}
               style={{
@@ -95,6 +105,15 @@ export default function ProjectsSection() {
               }}
               data-testid={`card-project-${index}`}
             >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-testid={`img-project-${index}`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+              </div>
               <CardHeader className="space-y-3">
                 <div className="flex items-start justify-between gap-2">
                   <CardTitle className="font-mono text-lg" data-testid={`text-project-title-${index}`}>
