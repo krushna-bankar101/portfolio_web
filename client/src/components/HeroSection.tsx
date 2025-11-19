@@ -148,7 +148,7 @@ export default function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="hidden md:inline-flex neon-glow"
+              className="neon-glow"
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = '/resume.pdf';
